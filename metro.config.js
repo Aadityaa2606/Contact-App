@@ -1,6 +1,7 @@
 /* eslint-env node */
 // Learn more https://docs.expo.io/guides/customizing-metro
 const { getDefaultConfig } = require("expo/metro-config")
+const { withNativeWind } = require("nativewind/metro")
 
 /** @type {import('expo/metro-config').MetroConfig} */
 const config = getDefaultConfig(__dirname)
@@ -13,6 +14,7 @@ config.transformer.getTransformOptions = async () => ({
     // Read more here: https://reactnative.dev/docs/optimizing-javascript-loading
     // And here: https://github.com/expo/expo/issues/27279#issuecomment-1971610698
     inlineRequires: true,
+    experimentalImportSupport: false,
   },
 })
 
@@ -21,3 +23,5 @@ config.transformer.getTransformOptions = async () => ({
 config.resolver.sourceExts.push("cjs")
 
 module.exports = config
+
+module.exports = withNativeWind(config, { input: "./global.css" })

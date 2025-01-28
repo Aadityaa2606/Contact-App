@@ -1,9 +1,12 @@
 import { Instance, SnapshotOut, types } from "mobx-state-tree"
+import { ContactBasketModel } from "./Contacts"
 
 /**
  * A RootStore model.
  */
-export const RootStoreModel = types.model("RootStore").props({})
+export const RootStoreModel = types.model("RootStore").props({
+  contactBasket: types.optional(ContactBasketModel, { contacts: [] }),
+})
 
 /**
  * The RootStore instance.

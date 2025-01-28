@@ -2,9 +2,13 @@
 
 > This is a simple contact app built with React Native and MobX. It allows you to add, edit, and delete contacts.
 
+### Demo Video
+https://drive.google.com/file/d/13rJX3VD9f-76cXHtUAVR-95nWA027-xY/view?usp=sharing
+
 <img src="image.png" alt="image" width="300" />
 <img src="image-1.png" alt="image" width="300" />
 <img src="image-2.png" alt="image" width="300" />
+
 
 ## Getting Started
 

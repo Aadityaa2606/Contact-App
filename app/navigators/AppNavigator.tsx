@@ -12,6 +12,8 @@ import Config from "../config"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 import { useAppTheme, useThemeProvider } from "@/utils/useAppTheme"
 import { ComponentProps } from "react"
+import { NewContactScreenProps } from "@/screens/NewContactScreen"
+import { IndividualContactScreenProps } from "@/screens/IndividualContactScreen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -28,8 +30,9 @@ import { ComponentProps } from "react"
  */
 export type AppStackParamList = {
   Welcome: undefined
-  // 🔥 Your screens go here
-  // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
+  Home: undefined
+  NewContact: NewContactScreenProps
+  IndividualContact: IndividualContactScreenProps
 }
 
 /**
@@ -62,8 +65,9 @@ const AppStack = observer(function AppStack() {
       }}
     >
       <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} />
-      {/** 🔥 Your screens go here */}
-      {/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
+      <Stack.Screen name="Home" component={Screens.HomeScreen} />
+      <Stack.Screen name="NewContact" component={Screens.NewContactScreen} />
+      <Stack.Screen name="IndividualContact" component={Screens.IndividualContactScreen} />
     </Stack.Navigator>
   )
 })

@@ -2,14 +2,13 @@
 
 This is a simple contact app built with React Native and MobX. It allows you to add, edit, and delete contacts.
 
-<img src="image.png" alt="image" width="300" />
-<img src="image-1.png" alt="image" width="300" />
+<img src="image.png" alt="image" width="300" /> <img src="image-1.png" alt="image" width="300" />
 <img src="image-2.png" alt="image" width="300" />
 
 ## Getting Started
 
 ```bash
-yarn
+yarn install
 yarn start
 ```
 
